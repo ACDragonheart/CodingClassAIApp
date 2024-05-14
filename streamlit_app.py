@@ -10,7 +10,7 @@ with st.expander("ℹ️ Disclaimer"):
         """
     )
 
-client = OpenAI(api_key=var.Your_Api_Key)
+client = OpenAI(api_key=${{ vars.Your_Api_Key }})
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
